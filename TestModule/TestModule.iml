@@ -7,5 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="StringTask" />
+    <orderEntry type="module" module-name="TicketsTask" />
   </component>
 </module>
