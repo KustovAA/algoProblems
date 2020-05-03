@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class TicketsTask implements ITask {
+    @Override
     public String run(ArrayList<String> data) throws Exception {
         if (data.size() < 1) {
             throw new Exception("incorrect args, non-empty List expected");
