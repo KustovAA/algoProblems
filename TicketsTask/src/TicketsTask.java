@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class TicketsTask implements ITask {
     public String run(ArrayList<String> data) throws Exception {
         if (data.size() < 1) {
-            return "";
+            throw new Exception("incorrect args, non-empty List expected");
         }
 
         int num = Integer.parseInt(data.get(0));
@@ -39,10 +39,8 @@ public class TicketsTask implements ITask {
             tempArray = new ArrayList<Long>();
         }
 
-        long result = 0L;
-        for (Long value : resArray) {
-            result += value * value;
-        }
+        long result = resArray.stream().reduce(0L, (acc, cur) -> acc + cur * cur);
+
         return Long.toString(result);
     }
 }
