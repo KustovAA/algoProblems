@@ -41,10 +41,13 @@ public class Tester {
 
         Scanner outReader = new Scanner(outFile);
         String expected = outReader.nextLine().trim();
+        long begin = System.currentTimeMillis();
         String actual = task.run(inLines);
+        long end = System.currentTimeMillis();
 
         if (expected.equals(actual)) {
             System.out.printf("Test #%d is PASSED!\n", number);
+            System.out.printf("Elapsed time: %d\n", end - begin);
             return;
         }
 
@@ -59,6 +62,26 @@ public class Tester {
 
             System.out.println("Tickets Task");
             new Tester(new TicketsTask(), "TestModule/src/1.Tickets").checkAll();
+            System.out.println();
+
+            System.out.println("GCD Task: remainder method");
+            new Tester(new GreatestCommonDivisorTask("remainder"), "TestModule/src/2.GCD").checkAll();
+            System.out.println();
+
+            System.out.println("GCD Task: binary method");
+            new Tester(new GreatestCommonDivisorTask("binary"), "TestModule/src/2.GCD").checkAll();
+            System.out.println();
+
+            System.out.println("Power Task: binary logarithmic");
+            new Tester(new PowerTask(), "TestModule/src/3.Power").checkAll();
+            System.out.println();
+
+            System.out.println("Fibo Task: iterative");
+            new Tester(new FiboTask("iterative"), "TestModule/src/4.Fibo").checkAll();
+            System.out.println();
+
+            System.out.println("Fibo Task: matrix");
+            new Tester(new FiboTask("matrix"), "TestModule/src/4.Fibo").checkAll();
             System.out.println();
         } catch (Exception e) {
             e.printStackTrace();
