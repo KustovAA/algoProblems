@@ -41,9 +41,9 @@ public class Tester {
 
         Scanner outReader = new Scanner(outFile);
         String expected = outReader.nextLine().trim();
-        long begin = System.currentTimeMillis();
+        long begin = System.nanoTime();
         String actual = task.run(inLines);
-        long end = System.currentTimeMillis();
+        long end = System.nanoTime();
 
         if (expected.equals(actual)) {
             System.out.printf("Test #%d is PASSED!\n", number);
