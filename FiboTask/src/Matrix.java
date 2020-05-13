@@ -2,9 +2,9 @@ import java.math.BigInteger;
 import java.util.Arrays;
 
 public class Matrix {
-    private int width;
-    private int height;
-    private BigInteger[][] data;
+    private final int width;
+    private final int height;
+    private final BigInteger[][] data;
 
     public Matrix(int width, int height) {
         this.width = width;
@@ -52,8 +52,8 @@ public class Matrix {
         for(int i = 0; i < width; i++) {
             for(int j = 0; j < width; j++) {
                 result.data[i][j] = new BigInteger("0");
-                for(int k = 0; k < width; k++)
-                {
+
+                for(int k = 0; k < width; k++) {
                     result.data[i][j] = result.data[i][j].add(this.data[i][k].multiply(mat.data[k][j]));
                 }
             }

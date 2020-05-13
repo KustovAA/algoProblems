@@ -44,10 +44,10 @@ public class FiboTask implements ITask {
     }
 
     private BigInteger matrix(long n) {
-        if (n < 2) {
-            return new BigInteger(String.valueOf(n));
+        if (n <= 2) {
+            return new BigInteger(String.valueOf(Math.min(n, 1)));
         }
 
-        return Matrix.FibIdentity().power(n).getDataByCoords(1, 0);
+        return Matrix.FibIdentity().power(n - 1).getDataByCoords(0, 0);
     }
 }
