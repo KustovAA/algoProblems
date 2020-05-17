@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -56,32 +57,36 @@ public class Tester {
 
     public static void main(String[] args) {
         try {
-            System.out.println("String Task");
-            new Tester(new StringTask(), "TestModule/src/0.String").checkAll();
-            System.out.println();
+//            System.out.println("String Task");
+//            new Tester(new StringTask(), "TestModule/src/0.String").checkAll();
+//            System.out.println();
+//
+//            System.out.println("Tickets Task");
+//            new Tester(new TicketsTask(), "TestModule/src/1.Tickets").checkAll();
+//            System.out.println();
+//
+//            System.out.println("GCD Task: remainder method");
+//            new Tester(new GreatestCommonDivisorTask("remainder"), "TestModule/src/2.GCD").checkAll();
+//            System.out.println();
+//
+//            System.out.println("GCD Task: binary method");
+//            new Tester(new GreatestCommonDivisorTask("binary"), "TestModule/src/2.GCD").checkAll();
+//            System.out.println();
+//
+//            System.out.println("Power Task: binary logarithmic");
+//            new Tester(new PowerTask(), "TestModule/src/3.Power").checkAll();
+//            System.out.println();
+//
+//            System.out.println("Fibo Task: iterative");
+//            new Tester(new FiboTask("iterative"), "TestModule/src/4.Fibo").checkAll();
+//            System.out.println();
+//
+//            System.out.println("Fibo Task: matrix");
+//            new Tester(new FiboTask("matrix"), "TestModule/src/4.Fibo").checkAll();
+//            System.out.println();
 
-            System.out.println("Tickets Task");
-            new Tester(new TicketsTask(), "TestModule/src/1.Tickets").checkAll();
-            System.out.println();
-
-            System.out.println("GCD Task: remainder method");
-            new Tester(new GreatestCommonDivisorTask("remainder"), "TestModule/src/2.GCD").checkAll();
-            System.out.println();
-
-            System.out.println("GCD Task: binary method");
-            new Tester(new GreatestCommonDivisorTask("binary"), "TestModule/src/2.GCD").checkAll();
-            System.out.println();
-
-            System.out.println("Power Task: binary logarithmic");
-            new Tester(new PowerTask(), "TestModule/src/3.Power").checkAll();
-            System.out.println();
-
-            System.out.println("Fibo Task: iterative");
-            new Tester(new FiboTask("iterative"), "TestModule/src/4.Fibo").checkAll();
-            System.out.println();
-
-            System.out.println("Fibo Task: matrix");
-            new Tester(new FiboTask("matrix"), "TestModule/src/4.Fibo").checkAll();
+            System.out.println("Bitboard Task: king");
+            new Tester(new Bitboard("king"), "TestModule/src/6.BitboardKing").checkAll();
             System.out.println();
         } catch (Exception e) {
             e.printStackTrace();

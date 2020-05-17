@@ -7,11 +7,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="StringTask" />
-    <orderEntry type="module" module-name="TicketsTask" />
-    <orderEntry type="module" module-name="GreatestCommonDivisorTask" />
-    <orderEntry type="module" module-name="PowerTask" />
-    <orderEntry type="module" module-name="FiboTask" />
-    <orderEntry type="module" module-name="Bitboard" />
+    <orderEntry type="module" module-name="TestModule" />
   </component>
 </module>
