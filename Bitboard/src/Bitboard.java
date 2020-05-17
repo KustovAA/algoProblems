@@ -12,9 +12,22 @@ public class Bitboard implements ITask {
     public String run(ArrayList<String> data) throws Exception {
         if (mode.equals("king")) {
             return king(Integer.parseInt(data.get(0)));
+        } else if (mode.equals("knight")) {
+            return knight(Integer.parseInt(data.get(0)));
         }
 
         return "";
+    }
+
+    private String getResult(BigInteger mask) {
+        int count = 0;
+        BigInteger tmp = mask;
+        while (tmp.compareTo(BigInteger.ZERO) != 0) {
+            tmp = tmp.and(tmp.subtract(BigInteger.ONE));
+            count++;
+        }
+
+        return String.format("%s %s", String.valueOf(count), mask.toString());
     }
 
     private String king(int place) {
@@ -32,13 +45,26 @@ public class Bitboard implements ITask {
                             .or(k.shiftRight(8))
                             .or(kR.shiftRight(7));
 
-        int count = 0;
-        BigInteger tmp = mask;
-        while (tmp.compareTo(BigInteger.ZERO) != 0) {
-            tmp = tmp.and(tmp.subtract(BigInteger.ONE));
-            count++;
-        }
+        return getResult(mask);
+    }
 
-        return String.format("%s %s", String.valueOf(count), mask.toString());
+    private String knight(int place) {
+        BigInteger start = BigInteger.ONE.shiftLeft(place);
+        BigInteger closeLeft = start.and(new BigInteger("FEFEFEFEFEFEFEFE", 16));
+        BigInteger farLeft = start.and(new BigInteger("FCFCFCFCFCFCFCFC", 16));
+        BigInteger closeRight = start.and(new BigInteger("7F7F7F7F7F7F7F7F", 16));
+        BigInteger farRight = start.and(new BigInteger("3F3F3F3F3F3F3F3F", 16));
+
+        BigInteger mask = closeLeft
+                                .shiftLeft(15)
+                                .or(farLeft.shiftLeft(6))
+                                .or(farLeft.shiftRight(10))
+                                .or(closeLeft.shiftRight(17))
+                                .or(closeRight.shiftRight(15))
+                                .or(farRight.shiftRight(6))
+                                .or(farRight.shiftLeft(10))
+                                .or(closeRight.shiftLeft(17));
+
+        return getResult(mask);
     }
 }
