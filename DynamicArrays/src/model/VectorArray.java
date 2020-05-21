@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class VectorArray<T> implements IArray<T> {
 
     private T[] array;
-    private int vector;
+    private final int vector;
     private int size;
 
     public VectorArray(int vector) {

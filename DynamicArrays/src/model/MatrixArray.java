@@ -8,7 +8,7 @@ public class MatrixArray<T> implements IArray<T> {
 
     public MatrixArray(int vector) {
         this.vector = vector;
-        array = new SingleArray<>();
+        array = new FactorArray<>();
         size = 0;
     }
 

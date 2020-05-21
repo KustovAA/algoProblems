@@ -6,13 +6,13 @@ public class Program {
 
     public static void main(String[] args) {
         IArray<Integer> singleArray = new SingleArray<>();
-        IArray<Integer> vectorArray = new VectorArray<>();
+        IArray<Integer> vectorArray = new VectorArray<>(1000);
         IArray<Integer> factorArray = new FactorArray<>();
         IArray<Integer> matrixArray = new MatrixArray<>();
-//        testAddArray(matrixArray, 20);
-//        testAddArray(vectorArray, 100_000);
-//        testAddArray(factorArray, 100_000);
-//        testAddArray(matrixArray, 100_000);
+        testAddArray(singleArray, 100000);
+        testAddArray(vectorArray, 1000000);
+        testAddArray(factorArray, 10000000);
+        testAddArray(matrixArray, 10000000);
 
 //        matrixArray.add(13, 9);
 //        System.out.println(matrixArray.get(20));

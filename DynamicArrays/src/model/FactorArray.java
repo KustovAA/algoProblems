@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class FactorArray<T> implements IArray<T> {
 
     private T[] array;
-    private int factor;
+    private final int factor;
     private int size;
 
     public FactorArray(int factor, int initLength) {
