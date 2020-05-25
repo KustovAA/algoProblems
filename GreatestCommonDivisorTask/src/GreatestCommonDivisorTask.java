@@ -35,7 +35,7 @@ public class GreatestCommonDivisorTask implements ITask {
             ).toString(10);
         }
 
-        return "";
+        return null;
     }
 
     private BigInteger subtraction(BigInteger a, BigInteger b) {

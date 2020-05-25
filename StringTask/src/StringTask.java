@@ -7,6 +7,6 @@ public class StringTask implements ITask {
             return Integer.toString(data.get(0).length());
         }
 
-        return "";
+        return null;
     }
 }

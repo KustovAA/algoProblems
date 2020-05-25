@@ -2,6 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.math.BigInteger;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Tester {
@@ -44,6 +45,9 @@ public class Tester {
         String expected = outReader.nextLine().trim();
         long begin = System.nanoTime();
         String actual = task.run(inLines);
+        if (actual == null) {
+            return;
+        }
         long end = System.nanoTime();
 
         if (expected.equals(actual)) {
@@ -93,8 +97,72 @@ public class Tester {
 //            new Tester(new Bitboard("knight"), "TestModule/src/7.Knight").checkAll();
 //            System.out.println();
 
-            System.out.println("Bitboard Task: FEN");
-            new Tester(new Bitboard("FEN"), "TestModule/src/8.FEN").checkAll();
+//            System.out.println("Bitboard Task: FEN");
+//            new Tester(new Bitboard("FEN"), "TestModule/src/8.FEN").checkAll();
+//            System.out.println();
+
+            System.out.println("Sort Task: selection, integers");
+            new Tester(new SortTask("selection"), "TestModule/src/9.Sort/0.random").checkAll();
+            System.out.println();
+
+            System.out.println("Sort Task: selection, digits");
+            new Tester(new SortTask("selection"), "TestModule/src/9.Sort/1.digits").checkAll();
+            System.out.println();
+
+            System.out.println("Sort Task: selection, sorted");
+            new Tester(new SortTask("selection"), "TestModule/src/9.Sort/2.sorted").checkAll();
+            System.out.println();
+
+            System.out.println("Sort Task: selection, reversed");
+            new Tester(new SortTask("selection"), "TestModule/src/9.Sort/3.revers").checkAll();
+            System.out.println();
+
+            System.out.println("Sort Task: insertion, integers");
+            new Tester(new SortTask("insertion"), "TestModule/src/9.Sort/0.random").checkAll();
+            System.out.println();
+
+            System.out.println("Sort Task: insertion, digits");
+            new Tester(new SortTask("insertion"), "TestModule/src/9.Sort/1.digits").checkAll();
+            System.out.println();
+
+            System.out.println("Sort Task: insertion, sorted");
+            new Tester(new SortTask("insertion"), "TestModule/src/9.Sort/2.sorted").checkAll();
+            System.out.println();
+
+            System.out.println("Sort Task: insertion, reversed");
+            new Tester(new SortTask("insertion"), "TestModule/src/9.Sort/3.revers").checkAll();
+            System.out.println();
+
+            System.out.println("Sort Task: shell, integers");
+            new Tester(new SortTask("shell"), "TestModule/src/9.Sort/0.random").checkAll();
+            System.out.println();
+
+            System.out.println("Sort Task: shell, digits");
+            new Tester(new SortTask("shell"), "TestModule/src/9.Sort/1.digits").checkAll();
+            System.out.println();
+
+            System.out.println("Sort Task: shell, sorted");
+            new Tester(new SortTask("shell"), "TestModule/src/9.Sort/2.sorted").checkAll();
+            System.out.println();
+
+            System.out.println("Sort Task: shell, reversed");
+            new Tester(new SortTask("shell"), "TestModule/src/9.Sort/3.revers").checkAll();
+            System.out.println();
+
+            System.out.println("Sort Task: heap, integers");
+            new Tester(new SortTask("heap"), "TestModule/src/9.Sort/0.random").checkAll();
+            System.out.println();
+
+            System.out.println("Sort Task: heap, digits");
+            new Tester(new SortTask("heap"), "TestModule/src/9.Sort/1.digits").checkAll();
+            System.out.println();
+
+            System.out.println("Sort Task: heap, sorted");
+            new Tester(new SortTask("heap"), "TestModule/src/9.Sort/2.sorted").checkAll();
+            System.out.println();
+
+            System.out.println("Sort Task: heap, reversed");
+            new Tester(new SortTask("heap"), "TestModule/src/9.Sort/3.revers").checkAll();
             System.out.println();
         } catch (Exception e) {
             e.printStackTrace();

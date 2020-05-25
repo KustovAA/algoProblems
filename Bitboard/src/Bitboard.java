@@ -21,7 +21,7 @@ public class Bitboard implements ITask {
                 return FEN(data.get(0));
         }
 
-        return "";
+        return null;
     }
 
     private String getResult(BigInteger mask) {

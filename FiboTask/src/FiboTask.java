@@ -22,7 +22,7 @@ public class FiboTask implements ITask {
             return matrix(Long.parseLong(data.get(0))).toString();
         }
 
-        return "";
+        return null;
     }
 
     private BigInteger iterative(long n) {
