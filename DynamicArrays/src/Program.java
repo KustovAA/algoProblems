@@ -5,14 +5,14 @@ import java.util.Date;
 public class Program {
 
     public static void main(String[] args) {
-        IArray<Integer> singleArray = new SingleArray<>();
-        IArray<Integer> vectorArray = new VectorArray<>(1000);
-        IArray<Integer> factorArray = new FactorArray<>();
-        IArray<Integer> matrixArray = new MatrixArray<>();
-        testAddArray(singleArray, 100000);
-        testAddArray(vectorArray, 1000000);
-        testAddArray(factorArray, 10000000);
-        testAddArray(matrixArray, 10000000);
+//        IArray<Integer> singleArray = new SingleArray<>();
+//        IArray<Integer> vectorArray = new VectorArray<>(1000);
+//        IArray<Integer> factorArray = new FactorArray<>();
+//        IArray<Integer> matrixArray = new MatrixArray<>();
+//        testAddArray(singleArray, 100000);
+//        testAddArray(vectorArray, 1000000);
+//        testAddArray(factorArray, 10000000);
+//        testAddArray(matrixArray, 10000000);
 
 //        matrixArray.add(13, 9);
 //        System.out.println(matrixArray.get(20));
@@ -20,6 +20,14 @@ public class Program {
 //        System.out.println(matrixArray.remove(9));
 //        System.out.println(matrixArray.remove(9));
 //        System.out.println(matrixArray.size());
+
+        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
+        priorityQueue.enqueue(3, 5);
+        priorityQueue.enqueue(2, 4);
+        priorityQueue.enqueue(2, 3);
+        System.out.println(priorityQueue.dequeue());
+        System.out.println(priorityQueue.dequeue());
+        System.out.println(priorityQueue.dequeue());
     }
 
     private static void testAddArray(IArray<Integer> data, int total) {
