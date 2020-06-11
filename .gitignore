@@ -1,5 +1,4 @@
 .idea
 .vscode
-
-TestModuleOutput
-TestModule/src/9.Sort
+venv
+tests/9.sort
