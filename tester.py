@@ -1,5 +1,6 @@
 from time import time_ns
 
+
 class Tester:
     def __init__(self, task, path):
         self.task = task
