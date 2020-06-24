@@ -53,82 +53,82 @@ from tasks.trees.task import bst_tree as trees_task_bst_tree, avl_tree as trees_
 # Tester(fen_task, './tests/8.FEN').check_all()
 # print()
 #
-# print('sort task: selection -- RANDOM')
-# Tester(sort_task_selection, './tests/9.sort/0.random').check_all()
-# print()
-#
-# print('sort task: selection -- DIGITS')
-# Tester(sort_task_selection, './tests/9.sort/1.digits').check_all()
-# print()
-#
-# print('sort task: selection -- SORTED')
-# Tester(sort_task_selection, './tests/9.sort/2.sorted').check_all()
-# print()
-#
-# print('sort task: selection -- REVERS')
-# Tester(sort_task_selection, './tests/9.sort/3.revers').check_all()
-# print()
-#
-# print('sort task: insertion -- RANDOM')
-# Tester(sort_task_insertion, './tests/9.sort/0.random').check_all()
-# print()
-#
-# print('sort task: insertion -- DIGITS')
-# Tester(sort_task_insertion, './tests/9.sort/1.digits').check_all()
-# print()
-#
-# print('sort task: insertion -- SORTED')
-# Tester(sort_task_insertion, './tests/9.sort/2.sorted').check_all()
-# print()
-#
-# print('sort task: insertion -- REVERS')
-# Tester(sort_task_insertion, './tests/9.sort/3.revers').check_all()
-# print()
-#
-# print('sort task: shell -- RANDOM')
-# Tester(sort_task_shell, './tests/9.sort/0.random').check_all()
-# print()
-#
-# print('sort task: shell -- DIGITS')
-# Tester(sort_task_shell, './tests/9.sort/1.digits').check_all()
-# print()
-#
-# print('sort task: shell -- SORTED')
-# Tester(sort_task_shell, './tests/9.sort/2.sorted').check_all()
-# print()
-#
-# print('sort task: shell -- REVERS')
-# Tester(sort_task_shell, './tests/9.sort/3.revers').check_all()
-# print()
-#
-# print('sort task: heap -- RANDOM')
-# Tester(sort_task_heap, './tests/9.sort/0.random').check_all()
-# print()
-#
-# print('sort task: heap -- DIGITS')
-# Tester(sort_task_heap, './tests/9.sort/1.digits').check_all()
-# print()
-#
-# print('sort task: heap -- SORTED')
-# Tester(sort_task_heap, './tests/9.sort/2.sorted').check_all()
-# print()
-#
-# print('sort task: heap -- REVERS')
-# Tester(sort_task_heap, './tests/9.sort/3.revers').check_all()
-# print()
-
-print('trees task: bst -- random')
-Tester(trees_task_bst_tree, './tests/11.trees/random').check_all()
+print('sort task: selection -- RANDOM')
+Tester(sort_task_selection, './tests/9.sort/0.random').check_all()
 print()
 
-print('trees task: bst -- sorted')
-Tester(trees_task_bst_tree, './tests/11.trees/sorted').check_all()
+print('sort task: selection -- DIGITS')
+Tester(sort_task_selection, './tests/9.sort/1.digits').check_all()
 print()
 
-print('trees task: avl -- random')
-Tester(trees_task_avl_tree, './tests/11.trees/random').check_all()
+print('sort task: selection -- SORTED')
+Tester(sort_task_selection, './tests/9.sort/2.sorted').check_all()
 print()
 
-print('trees task: avl -- sorted')
-Tester(trees_task_avl_tree, './tests/11.trees/sorted').check_all()
+print('sort task: selection -- REVERS')
+Tester(sort_task_selection, './tests/9.sort/3.revers').check_all()
 print()
+
+print('sort task: insertion -- RANDOM')
+Tester(sort_task_insertion, './tests/9.sort/0.random').check_all()
+print()
+
+print('sort task: insertion -- DIGITS')
+Tester(sort_task_insertion, './tests/9.sort/1.digits').check_all()
+print()
+
+print('sort task: insertion -- SORTED')
+Tester(sort_task_insertion, './tests/9.sort/2.sorted').check_all()
+print()
+
+print('sort task: insertion -- REVERS')
+Tester(sort_task_insertion, './tests/9.sort/3.revers').check_all()
+print()
+
+print('sort task: shell -- RANDOM')
+Tester(sort_task_shell, './tests/9.sort/0.random').check_all()
+print()
+
+print('sort task: shell -- DIGITS')
+Tester(sort_task_shell, './tests/9.sort/1.digits').check_all()
+print()
+
+print('sort task: shell -- SORTED')
+Tester(sort_task_shell, './tests/9.sort/2.sorted').check_all()
+print()
+
+print('sort task: shell -- REVERS')
+Tester(sort_task_shell, './tests/9.sort/3.revers').check_all()
+print()
+
+print('sort task: heap -- RANDOM')
+Tester(sort_task_heap, './tests/9.sort/0.random').check_all()
+print()
+
+print('sort task: heap -- DIGITS')
+Tester(sort_task_heap, './tests/9.sort/1.digits').check_all()
+print()
+
+print('sort task: heap -- SORTED')
+Tester(sort_task_heap, './tests/9.sort/2.sorted').check_all()
+print()
+
+print('sort task: heap -- REVERS')
+Tester(sort_task_heap, './tests/9.sort/3.revers').check_all()
+print()
+
+# print('trees task: bst -- random')
+# Tester(trees_task_bst_tree, './tests/11.trees/random').check_all()
+# print()
+#
+# print('trees task: bst -- sorted')
+# Tester(trees_task_bst_tree, './tests/11.trees/sorted').check_all()
+# print()
+#
+# print('trees task: avl -- random')
+# Tester(trees_task_avl_tree, './tests/11.trees/random').check_all()
+# print()
+#
+# print('trees task: avl -- sorted')
+# Tester(trees_task_avl_tree, './tests/11.trees/sorted').check_all()
+# print()

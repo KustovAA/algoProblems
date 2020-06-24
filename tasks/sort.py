@@ -1,4 +1,7 @@
 def to_result(arr):
+    if arr is None:
+        return None
+
     res = ''
     for c in arr:
         res += c.strip() + ' '
@@ -6,12 +9,20 @@ def to_result(arr):
     return res.rstrip()
 
 
-def selection(data):
-    if len(data) < 2:
-        return None
+def task(inner):
+    def outer(data):
+        if len(data) < 2:
+            return None
 
-    arr = data[1].split(' ')
+        arr = data[1].split(' ')
 
+        return to_result(inner(arr))
+
+    return outer
+
+
+@task
+def selection(arr):
     if len(arr) > 10000:
         return None
 
@@ -28,15 +39,11 @@ def selection(data):
 
         arr[i], arr[min_ind] = arr[min_ind], arr[i]
 
-    return to_result(arr)
+    return arr
 
 
-def insertion(data):
-    if len(data) < 2:
-        return None
-
-    arr = data[1].split(' ')
-
+@task
+def insertion(arr):
     if len(arr) > 10000:
         return None
 
@@ -50,15 +57,11 @@ def insertion(data):
 
         arr[j + 1] = val
 
-    return to_result(arr)
+    return arr
 
 
-def shell(data):
-    if len(data) < 2:
-        return None
-
-    arr = data[1].split(' ')
-
+@task
+def shell(arr):
     gap = len(arr) // 2
     while gap > 0:
         for i in range(len(arr) - gap):
@@ -72,7 +75,7 @@ def shell(data):
             arr[j] = val
         gap //= 2
 
-    return to_result(arr)
+    return arr
 
 
 def heapify(arr, root, size):
@@ -91,12 +94,8 @@ def heapify(arr, root, size):
     heapify(arr, x, size)
 
 
-def heap(data):
-    if len(data) < 2:
-        return None
-
-    arr = data[1].split(' ')
-
+@task
+def heap(arr):
     for i in range(len(arr) // 2, -1, -1):
         heapify(arr, i, len(arr))
 
@@ -104,4 +103,4 @@ def heap(data):
         arr[0], arr[i] = arr[i], arr[0]
         heapify(arr, 0, i)
 
-    return to_result(arr)
+    return arr
